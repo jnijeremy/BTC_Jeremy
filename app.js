@@ -5,12 +5,13 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//creates a bunch of basic JavaScript variables and ties them to certain packages, dependencies, node functionality, and routes. 
 
 var routes = require('./routes/index');  
 //Routes are kind of like a combination of models and controllers in this setup – they direct traffic and also contain some programming logic
-var users = require('./routes/users');
 
-var app = express(); //It instantiates Express and assigns our app variable to it
+var app = express(); 
+//It instantiates Express and assigns our app variable to it
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,8 +24,9 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//routes
 app.use('/', routes);
-app.use('/users', users);
+
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -59,3 +61,4 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+// the object that's actually returned as the result of a require call
