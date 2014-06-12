@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 div.container {
   width: 280px;
   margin: 0 auto;
@@ -14,10 +15,13 @@ div.container.body {
   background-color: #A7DBD8;
 }
 
+=======
+>>>>>>> b6159e99fc20829d742a497646a0571b2bd99a9c
 body {
   font: 18px Helvetica, "Lucida Grande", Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 span.spinner{float:right;}
 span.btc{font-size: 20px;}
 
@@ -35,3 +39,21 @@ div.container {
   width: 200px;
 }
 }
+=======
+div.navbar {
+  margin: 0 auto;
+  margin-top: 15%;
+  width: 280px;
+  padding: 0, 5px; 
+}
+
+
+div.container {
+  background-color: #bbb;
+  width: 280px;
+  margin: 0 auto;
+  padding:10px;
+}
+
+p { text-align: center; }
+>>>>>>> b6159e99fc20829d742a497646a0571b2bd99a9c

@@ -1,9 +1,17 @@
 {
+<<<<<<< HEAD
   "name": "BTC_Jeremy",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
+=======
+  "name": "nodetest1",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+>>>>>>> b6159e99fc20829d742a497646a0571b2bd99a9c
   },
   "dependencies": {
     "express": "~4.2.0",
@@ -13,7 +21,13 @@
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
     "jade": "~1.3.0",
+<<<<<<< HEAD
     "request": "2.33.0",
     "async": "*"
     }
+=======
+    "mongodb": "*",
+    "monk": "*"
+  }
+>>>>>>> b6159e99fc20829d742a497646a0571b2bd99a9c
 }
