@@ -1,9 +1,11 @@
 var myApp = angular.module('myApp',[]);
-var interval = 5;
+var interval = 15;
 
 // execute 
 myApp.controller('BTC_ctrl',['$scope', '$http', '$interval', function($scope, $http, $interval)
 {
+  $scope.CAD = 0;
+  $scope.BRL = 0;
   $scope.spinning = false; // flag variable for spinner
   $scope.count = interval;  // countdown
 
@@ -21,7 +23,6 @@ myApp.controller('BTC_ctrl',['$scope', '$http', '$interval', function($scope, $h
        $scope.spinning = false;
     });
   };
-
   //code start, initialize
   $scope.fetch();
 
@@ -29,8 +30,8 @@ myApp.controller('BTC_ctrl',['$scope', '$http', '$interval', function($scope, $h
   $interval(function() 
   {
     if($scope.count == 0){
-      $scope.count = interval;
       $scope.fetch();
+      $scope.count = interval;
     }
     // if fetch is going on, countdown should stop
     else if($scope.spinning == false)
