@@ -1,9 +1,5 @@
 doctype html
-<<<<<<< HEAD
 html(lang="en", ng-app='myApp')
-=======
-html(lang="en", ng-app='BTC_Jeremy')
->>>>>>> b6159e99fc20829d742a497646a0571b2bd99a9c
 head
   meta(charset="utf-8")
   meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
@@ -13,7 +9,6 @@ head
   link(href='/stylesheets/style.css', rel='stylesheet')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular.min.js')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-resource.min.js')    
-<<<<<<< HEAD
   script(src='/javascripts/angular/app.js')           
 
 body(ng-controller="BTC_ctrl")
@@ -22,18 +17,6 @@ body(ng-controller="BTC_ctrl")
     span.spinner(ng-show="spinning")
       i.icon-spinner.icon-spin.icon-2x
   div.container.body
-=======
-  script(src='/javascripts/test.js')           
-body(ng-controller="BTCCtrl")
-  div.navbar.navbar-default
-    div.container-fluid
-      div.navbar-header
-        a.navbar-brand.navbar-left="BITCOIN"
-      ul.navbar-right
-            a(ng-show="running")
-              i.icon-spinner.icon-spin.icon-3x
-  div.container
->>>>>>> b6159e99fc20829d742a497646a0571b2bd99a9c
     p CAD:  {{CAD}}
     p BRL:  {{BRL}}
     p Last Update: {{time}}
