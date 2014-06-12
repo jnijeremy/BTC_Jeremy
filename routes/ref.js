@@ -3,21 +3,22 @@ Routes are kind of like a combination of models
 and controllers in this setup – they direct traffic 
 and also contain some programming logic
 */
+
 var express = require('express');
-var router = express.Router();
+var router = express.Router();  //get instance of Router
 var request = require('request');
 var async = require('async');
 
-/* GET home page. */
-// render index.js
+/* GET home page, render index.js*/
 router.get('/', function(req, res) {
   res.render('index', { title: 'BTC_Jeremy' });
 });
 
-/* GET data page, also be called when Angular starts $interval */
+/* GET data page, return the data in result */
 router.get('/data', function(req, res) {
   // parallel execution
   async.parallel(
+  //object containing functions to run
   {
     CAD: function(callback) {
       request('https://api.bitcoinaverage.com/ticker/global/CAD/last', function (error, response, body) {
@@ -37,7 +38,7 @@ router.get('/data', function(req, res) {
       callback(null, getTime());
     }
   },
-  // execute after async, return data in an object
+  //optional callback to run once all the functions have completed, return data in an object
   function(err, results) {
     res.send(results);
   });
@@ -55,4 +56,7 @@ function getTime(){
   return hour + ':' + min + ':' + sec;
 }
 
+//export router instance to app.js
 module.exports = router;
+
+

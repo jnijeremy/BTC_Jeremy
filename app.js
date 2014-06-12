@@ -1,13 +1,13 @@
-//entry of the app
+//entry of the project
 /*
 creates a bunch of basic JavaScript variables 
 and ties them to certain packages, dependencies, 
 node functionality, and routes. 
 */
 var express = require('express');
-var routes = require('./routes/index');
 var http = require('http');
 var path = require('path');
+var routes = require('./routes/server'); //direct to index.js
 
 var favicon = require('static-favicon');
 var logger = require('morgan');

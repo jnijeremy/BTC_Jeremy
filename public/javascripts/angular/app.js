@@ -1,14 +1,11 @@
 var myApp = angular.module('myApp',[]);
-var interval = 15;
+var interval = 5;
 
 // execute 
 myApp.controller('BTC_ctrl',['$scope', '$http', '$interval', function($scope, $http, $interval)
 {
-  //$scope.CAD=0;
-  //$scope.BRL=0;
-  //$scope.time = '00:00:00:00'
   $scope.spinning = false; // flag variable for spinner
-  $scope.count = 15;  // countdown
+  $scope.count = interval;  // countdown
 
   $scope.fetch = function(){
   $scope.spinning = true;
@@ -20,24 +17,20 @@ myApp.controller('BTC_ctrl',['$scope', '$http', '$interval', function($scope, $h
       $scope.spinning = false;
       $scope.time = data.time;
     }).
-    error(function(data){});
+    error(function(data){
+       $scope.spinning = false;
+    });
   };
 
   //code start, initialize
   $scope.fetch();
 
-  //refresh every 15 secs
-  $interval(function() 
-  {
-    if ($scope.spinning == false)
-      $scope.refresh();
-  }, interval*1000);
-
-  //countdown
+  //countdown and repeat fetch() every 'interval' seconds
   $interval(function() 
   {
     if($scope.count == 0){
-      $scope.count = 15;
+      $scope.count = interval;
+      $scope.fetch();
     }
     // if fetch is going on, countdown should stop
     else if($scope.spinning == false)
