@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+// set port and server
+var debug = require('debug')('nodetest2');
+
+});

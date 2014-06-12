@@ -1,0 +1,37 @@
+div.container {
+  width: 280px;
+  margin: 0 auto;
+  padding:10px;
+  border-radius: 4px;
+}
+
+div.container.header {
+  background-color: #E0E4CC;
+  margin-top: 12%;
+  border: ;
+}
+div.container.body {
+  background-color: #A7DBD8;
+}
+
+body {
+  font: 18px Helvetica, "Lucida Grande", Arial, sans-serif;
+}
+
+span.spinner{float:right;}
+span.btc{font-size: 20px;}
+
+p { text-align: center; }
+
+@media (max-width: 480px) { 
+
+body {
+  font: 12px Helvetica, "Lucida Grande", Arial, sans-serif;
+}
+
+span.btc{font-size: 14px; }
+ 
+div.container {
+  width: 200px;
+}
+}
