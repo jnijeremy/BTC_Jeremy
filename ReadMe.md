@@ -3,7 +3,7 @@
 A simple but good looking Bitcoin Dashboard that displays 3 pieces of information: the latest price in both Canadian and Brazilian currency with a timestamp.
 
 ##demo：
-- [warm-citadel-8573.herokuapp.com]()
+- [warm-citadel-8573.herokuapp.com](warm-citadel-8573.herokuapp.com)
 
 ## technology:
 
@@ -21,4 +21,4 @@ A simple but good looking Bitcoin Dashboard that displays 3 pieces of informatio
 2. Make sure you have the latest Node.js and express installed
 
 3. Go to the project directory, type `npm start` in terminal
-4. open [http://localhost:3000/]() in a browser
+4. open [http://localhost:3000/](http://localhost:3000/) in a browser
